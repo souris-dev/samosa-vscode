@@ -3,7 +3,7 @@
     "displayName": "slang-vscode",
     "description": "A simple VS Code extension for slang.",
     "version": "0.0.1",
-    "icon": "images/logo_128px.png",
+    "icon": "images/logo_384px.png",
     "repository": {
         "url": "https://github.com/souris-dev/slang-vscode-ext"
     },
