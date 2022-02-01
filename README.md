@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="images/logo_384px.png" />
+</p>
+<br />
+
+
 # slang-vscode
 
 This is a Visual Studio Code extension for the `slang` programming language.
