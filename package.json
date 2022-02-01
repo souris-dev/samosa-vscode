@@ -1,0 +1,25 @@
+{
+    "name": "slang-vscode",
+    "displayName": "slang-vscode",
+    "description": "A simple VS Code extension for slang.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "slang",
+            "aliases": ["Slang", "slang"],
+            "extensions": [".sl",".slang",".slng"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "slang",
+            "scopeName": "source.slang",
+            "path": "./syntaxes/slang.tmLanguage.json"
+        }]
+    }
+}

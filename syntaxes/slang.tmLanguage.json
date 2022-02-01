@@ -1,0 +1,133 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Slang",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#punctuation"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.slang",
+          "match": "\\b(if|else|while|return|SLANG)\\b"
+        },
+        {
+          "name": "keyword.control.vardef",
+          "match": "\\bbro\\b"
+        },
+        {
+          "name": "storage.type",
+          "match": "\\baction\\b"
+        },
+        {
+          "name": "storage.type.builtin.vartypes",
+          "match": "\\b(int|string|boolie)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.mathematical",
+          "match": "(\\+|\\-|\\/|(?<!\\/)\\*(?!\\/)|\\%|\\=)"
+        },
+        {
+          "name": "keyword.operator.logical",
+          "match": "(\\band\\b|\\&\\&|\\bor\\b|\\||\\bstrictor\\b|\\|\\|\\!|\\bno\\b|\\!)"
+        },
+        {
+          "name": "keyword.operator.relational",
+          "match": "(\\<\\=|\\>\\=|\\<|\\>|\\=\\=|\\!\\=)"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "begin": "\\(",
+          "end": "\\)",
+          "patterns": [
+            {
+              "include": "#operators"
+            },
+            {
+              "include": "#strings"
+            },
+            {
+              "include": "#constants"
+            }
+          ],
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.paren.open"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punction.paren.close"
+            }
+          }
+        },
+        {
+          "name": "punction.terminator",
+          "match": "\\."
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.slang",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.slang",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash",
+          "begin": "\\/\\/",
+          "end": "(?=\\n)"
+        },
+        {
+          "name": "comment.block",
+          "begin": "\\/\\*",
+          "end": "\\*\\/"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric",
+          "match": "\\b(0|([1-9][0-9]*))\\b"
+        },
+        {
+          "name": "constant.language",
+          "match": "\\b(true|yes|True|TRUE|false|nope|False|FALSE)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.slang"
+}
