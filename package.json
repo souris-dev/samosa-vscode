@@ -1,7 +1,7 @@
 {
-    "name": "slang-vscode",
-    "displayName": "slang-vscode",
-    "description": "A simple VS Code extension for slang.",
+    "name": "samosa-vscode",
+    "displayName": "samosa-vscode",
+    "description": "A simple VS Code extension for samosa.",
     "version": "0.0.1",
     "icon": "images/logo_384px.png",
     "repository": {
