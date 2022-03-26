@@ -16,15 +16,15 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "slang",
-            "aliases": ["Slang", "slang"],
-            "extensions": [".sl",".slang",".slng"],
+            "id": "samosa",
+            "aliases": ["Samosa", "samosa"],
+            "extensions": [".samo",".smo"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "slang",
-            "scopeName": "source.slang",
-            "path": "./syntaxes/slang.tmLanguage.json"
+            "language": "samosa",
+            "scopeName": "source.samosa",
+            "path": "./syntaxes/samosa.tmLanguage.json"
         }]
     }
 }

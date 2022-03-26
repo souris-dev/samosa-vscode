@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Slang",
+  "name": "Samosa",
   "patterns": [
     {
       "include": "#keywords"
@@ -26,7 +26,7 @@
       "patterns": [
         {
           "name": "keyword.control.slang",
-          "match": "\\b(if|else|while|return|SLANG)\\b"
+          "match": "\\b(if|else|while|return|samosa)\\b"
         },
         {
           "name": "keyword.control.vardef",
@@ -34,7 +34,7 @@
         },
         {
           "name": "storage.type",
-          "match": "\\baction\\b"
+          "match": "\\blet\\b"
         },
         {
           "name": "storage.type.builtin.vartypes",
@@ -55,6 +55,14 @@
         {
           "name": "keyword.operator.relational",
           "match": "(\\<\\=|\\>\\=|\\<|\\>|\\=\\=|\\!\\=)"
+        },
+        {
+          "name": "keyword.operator.probability.single",
+          "match": "\\?\\[.*\\]\\.\\.\\."
+        },
+        {
+          "name": "keyword.operator.probability.multiple",
+          "match": "\\?\\[.*\\](?!\\.\\.\\.)"
         }
       ]
     },
@@ -129,5 +137,5 @@
       ]
     }
   },
-  "scopeName": "source.slang"
+  "scopeName": "source.samosa"
 }
